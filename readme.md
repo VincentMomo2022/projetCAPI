@@ -5,5 +5,5 @@
 exemple :  
     -arboressance  
     -rapport dans tel dossier  
-    -tel prgramme fait ci  
+    -tel programme fait ci  
     -tel dossier contien ci

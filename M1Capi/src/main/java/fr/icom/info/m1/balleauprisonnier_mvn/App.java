@@ -1,4 +1,5 @@
 package fr.icom.info.m1.balleauprisonnier_mvn;
+import fr.icom.info.m1.balleauprisonnier_mvn.Field;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -8,7 +9,7 @@ import javafx.stage.Stage;
 public class App extends Application{
 	/** En javafx start() lance l'application
 	 *
-	 * On cree le SceneGraph de l'application ici*/
+	 * On cree le Sce(neGraph de l'application ici*/
 	@Override
 	public void start(Stage stage) throws Exception {
 		// Nom de la fenetre
@@ -18,7 +19,7 @@ public class App extends Application{
         Scene scene = new Scene( root );
 
         // On cree le terrain de jeu et on l'ajoute a la racine de la scene
-        Field gameField = new Field(scene, 600, 600 );
+        Field gameField = Field.getInstance();
         root.getChildren().add( gameField );
 		root.getChildren().add(gameField.getJoueurs()[0].sprite);
 		root.getChildren().add(gameField.getJoueurs()[1].sprite);
