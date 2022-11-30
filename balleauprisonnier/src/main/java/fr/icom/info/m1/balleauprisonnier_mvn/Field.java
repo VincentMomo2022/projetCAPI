@@ -204,9 +204,10 @@ public class Field extends Canvas {
 						projectile.display();
 					}
 
-	        		joueurs[i].display();
+					joueurs[i].display();
 					joueursIA[i].display();
 	    	    }
+
 	    	}
 	     }.start(); // On lance la boucle de rafraichissement 
 	     
