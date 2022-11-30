@@ -119,6 +119,10 @@ public class PlayerHumain implements Player
 			spriteAnimate();
 		    x -= step;
 	    }
+	    if (x<=10)
+	    {
+			x = 11;
+	    }
 	  }
 
 	  /**
@@ -131,6 +135,10 @@ public class PlayerHumain implements Player
 			spriteAnimate();
 		    x += step;
 	    }
+		if (x>=520)
+		{
+			x = 519;
+		}
 	  }
 
 
