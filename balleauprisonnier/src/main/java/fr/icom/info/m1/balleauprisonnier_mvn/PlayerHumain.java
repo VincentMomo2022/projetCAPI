@@ -46,7 +46,7 @@ public class PlayerHumain implements Player
 	    y = yInit;
 	    graphicsContext = gc;
 	    playerColor=color;
-
+		this.side = side;
 	    angle = 0;
 
 	    // On charge la representation du joueur
