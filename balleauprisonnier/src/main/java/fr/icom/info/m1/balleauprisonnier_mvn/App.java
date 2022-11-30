@@ -20,6 +20,9 @@ public class App extends Application
 	 * @see http://docs.oracle.com/javafx/2/scenegraph/jfxpub-scenegraph.htm
 	 * 
 	 */
+	public Group root;
+	public Scene scene;
+
 	@Override
 	public void start(Stage stage) throws Exception 
 	{
@@ -30,10 +33,14 @@ public class App extends Application
         Scene scene = new Scene( root );
 
         // On cree le terrain de jeu et on l'ajoute a la racine de la scene
-        Field gameField = new Field(scene, 600, 600 );
+        Field gameField = Field.getInstance();
         root.getChildren().add( gameField );
-		root.getChildren().add(gameField.getJoueurs()[0].sprite);
-		root.getChildren().add(gameField.getJoueurs()[1].sprite);
+		root.getChildren().add(gameField.getJoueursBas()[0].getSprite());
+		root.getChildren().add(gameField.getJoueursBas()[1].getSprite());
+		root.getChildren().add(gameField.getJoueursBas()[2].getSprite());
+		root.getChildren().add(gameField.getJoueursHaut()[0].getSprite());
+		root.getChildren().add(gameField.getJoueursHaut()[1].getSprite());
+		root.getChildren().add(gameField.getJoueursHaut()[2].getSprite());
 
         // On ajoute la scene a la fenetre et on affiche
         stage.setScene( scene );
