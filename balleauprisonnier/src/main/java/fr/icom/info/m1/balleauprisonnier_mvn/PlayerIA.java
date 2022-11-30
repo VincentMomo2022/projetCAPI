@@ -87,7 +87,13 @@ public class PlayerIA implements Player
 	{
 		graphicsContext.save(); // saves the current state on stack, including the current transform
 		rotate(graphicsContext, angle, x + directionArrow.getWidth() / 2, y + directionArrow.getHeight() / 2);
-		graphicsContext.drawImage(directionArrow, x, y);
+		if(side=="top"){
+			graphicsContext.drawImage(directionArrow, x, y );
+		}
+		else{
+			graphicsContext.drawImage(directionArrow, x, y -60);
+		}
+
 		graphicsContext.restore(); // back to original state (before rotation)
 		if(ball != null){
 			ball.updatePosition(x, y, angle);

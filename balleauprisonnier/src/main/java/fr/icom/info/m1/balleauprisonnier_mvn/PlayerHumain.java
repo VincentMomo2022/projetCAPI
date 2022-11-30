@@ -87,11 +87,20 @@ public class PlayerHumain implements Player
 	  {
 		  graphicsContext.save(); // saves the current state on stack, including the current transform
 	      rotate(graphicsContext, angle, x + directionArrow.getWidth() / 2, y + directionArrow.getHeight() / 2);
-		  graphicsContext.drawImage(directionArrow, x, y);
-		  graphicsContext.restore(); // back to original state (before rotation)
-		  if(ball != null){
-			  ball.updatePosition(x, y, angle);
+		  if(side=="top"){
+			  graphicsContext.drawImage(directionArrow, x, y );
+			  if(ball != null){
+				  ball.updatePosition(x, y +30 , angle);
+			  }
 		  }
+		  else{
+			  graphicsContext.drawImage(directionArrow, x, y -60);
+			  if(ball != null){
+				  ball.updatePosition(x, y , angle);
+			  }
+		  }
+		  graphicsContext.restore(); // back to original state (before rotation)
+
 	  }
 
 	  public void rotate(GraphicsContext gc, double angle, double px, double py) {
